@@ -33,10 +33,47 @@ let questionValues = [100, 200, 300, 400, 500];
  *          <div class='question-cell' data-category='1'>VALUE</div>
  *      HINT: Use the + operator on a string and a variable to join them!
  *      Need more help? Check out https://bit.ly/2EIsD3b or ask a volunteer.
+ *
  */
+for(let i=0; i<questionValues.length; i++) {
+    console.log(i); //i is an index that helps us access values
+    console.log(questionValues[i]);
+
+}
 function renderQuestions() {
     // Add code here
-    for(let i =0: i < numCategories: i++) {
-        for(let z = 0: z <questionValues.length: z++)
+    for(let i =0; i < numCategories; i++) { 
+        $("#questions").append("<div class='questions-column'>")
+        for(let z = 0; z <questionValues.length; z++){
+             $("#questions").append("<div class='question-cell' data-category='" + i +"'>" + questionValues[z] + "</div>")
+        }
     }
+
 }
+
+/*first iteration in first loop: i=0
+    <div class='questions-column'>
+    //first iteration in second loop: z=0
+        "<div class='question-cell' data-category='" + i +"'>" + questionValues[z] + "</div>
+    </div>
+      //second iteration in second loop: z=1
+        "<div class='question-cell' data-category='" + i +"'>" + questionValues[z] + "</div>
+        </div>
+    //third iteration in second loop: z=2
+        "<div class='question-cell' data-category='" + i +"'>" + questionValues[z] + "</div>
+        </div>
+
+
+
+*/
+/*
+<div class='questions-column'></div>
+<div class='question-cell ....></div>
+
+This is what we want:
+<div class='questions-column'>
+    <div class='question-cell' data-category='" + i +"'>" + questionValues[z]></div>
+</div>
+
+
+*/
