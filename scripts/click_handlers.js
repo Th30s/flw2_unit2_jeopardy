@@ -37,10 +37,11 @@
 function attachClickHandlers() {
   $(".question-cell").each((index, questionElement) => {
     // categoryIndex is used to look up the jeopardy question for this element.
-    let categoryIndex = $(questionElement).attr("data-category");
+    let categoryIndex = $(questionElement).attr("data-category"); //What function uses this information?
     let moneyValue = $(questionElement).text().replace("$", "");
     $(questionElement).click(() => {
-      // Add code here
+      // Add code here -- HINT use another function that already exists
+      questionOnClick(categoryIndex, moneyValue)
     });
   });
 }

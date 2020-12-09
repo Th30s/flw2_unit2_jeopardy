@@ -43,10 +43,12 @@ for(let i=0; i<questionValues.length; i++) {
 function renderQuestions() {
     // Add code here
     for(let i =0; i < numCategories; i++) { 
-        $("#questions").append("<div class='questions-column'>")
+        let questionHtml = "<div class='questions-column'>"
         for(let z = 0; z <questionValues.length; z++){
-             $("#questions").append("<div class='question-cell' data-category='" + i +"'>" + questionValues[z] + "</div>")
+            questionHtml += "<div class='question-cell' data-category='" + i +"'>" + questionValues[z] + "</div>"
         }
+            questionHtml += '</div>'
+        $("#questions").append(questionHtml)
     }
 
 }
