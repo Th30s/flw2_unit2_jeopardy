@@ -44,8 +44,8 @@ function renderQuestions() {
     // Add code here
     for(let i =0; i < numCategories; i++) { 
         let questionHtml = "<div class='questions-column'>"
-        for(let z = 0; z <questionValues.length; z++){
-            questionHtml += "<div class='question-cell' data-category='" + i +"'>" + questionValues[z] + "</div>"
+        for(const z of questionValues){
+            questionHtml += "<div class='question-cell' data-category='" + i +"'>" + "$" + z + "</div>"
         }
             questionHtml += '</div>'
         $("#questions").append(questionHtml)

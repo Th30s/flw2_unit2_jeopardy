@@ -16,7 +16,7 @@
  */
 
 function renderScoringButtons() {
-    // Add code here
+    
 }
 
 /* TODO: Program the following:

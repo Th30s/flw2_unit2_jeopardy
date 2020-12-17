@@ -62,7 +62,7 @@ function questionOnClick(categoryIndex, moneyValue) {
   $("#question-modal-show-answer")
     .click(() => {
       // Add code here
-      console.log("I just got clicked, I wish I could do more though!");
+      answerOnClick()
     })
     .show();
 
